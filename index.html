@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classmaster O'quv Markazi — Zamonaviy Ta'lim, Porloq Kelajak</title>
+    <meta name="description" content="Classmaster O'quv Markazi — zamonaviy metodika yordamida kelajak mutaxassislarini tayyorlaydigan innovatsion ta'lim markazi. Dasturlash, tillar, matematika, fizika va boshqa kurslar." />
+    <meta name="keywords" content="classmaster, o'quv markazi, dasturlash kurslari, ingliz tili, IELTS, matematika, fizika, nemis tili, koreys tili, ta'lim" />
+    <meta property="og:title" content="Classmaster O'quv Markazi" />
+    <meta property="og:description" content="Zamonaviy metodika yordamida kelajak mutaxassislarini tayyorlaydigan innovatsion ta'lim markazi." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://classmaster.uz" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+    <!-- ===== SCROLL PROGRESS BAR ===== -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="nav-logo">
+                <img src="images/logo.jpg" alt="Classmaster Logo" class="nav-logo-img" />
+                <div class="nav-logo-text">
+                    <span class="nav-logo-title">classmaster</span>
+                    <span class="nav-logo-subtitle">O'quv Markazi</span>
+                </div>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Bosh sahifa</a></li>
+                <li><a href="#about" class="nav-link">Biz haqimizda</a></li>
+                <li><a href="#courses" class="nav-link">Kurslar</a></li>
+                <li><a href="#teachers" class="nav-link">O'qituvchilar</a></li>
+                <li><a href="#news" class="nav-link">Yangiliklar</a></li>
+                <li><a href="#testimonials" class="nav-link">Fikrlar</a></li>
+                <li><a href="#contact" class="nav-link">Bog'lanish</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="lang-switcher">
+                    <button class="lang-btn active" data-lang="uz">UZ</button>
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Mavzu almashtirish">
+                    <svg class="theme-icon moon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+                    <svg class="theme-icon sun" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menyu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="home">
+        <canvas id="particle-canvas"></canvas>
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge reveal">
+                    <span class="badge-dot"></span>
+                    Xush kelibsiz
+                </div>
+                <h1 class="hero-title reveal">
+                    Classmaster <br />
+                    <span class="typing-wrapper">
+                        <span class="typing-text" id="typingText">O'quv Markazi</span>
+                        <span class="typing-cursor">|</span>
+                    </span>
+                </h1>
+                <p class="hero-subtitle reveal">
+                    Zamonaviy metodika yordamida kelajak mutaxassislarini tayyorlaydigan innovatsion ta'lim markazi. 6 yildan ortiq tajriba, 1000+ bitiruvchilar.
+                </p>
+                <div class="hero-actions reveal">
+                    <a href="#courses" class="hero-cta">
+                        Kurslarni ko'rish
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                    </a>
+                    <a href="tel:+998958995500" class="hero-cta-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        Qo'ng'iroq qilish
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image-wrap reveal-right">
+                <div class="hero-image-glow"></div>
+                <img src="images/head.jpg" alt="Classmaster O'quv Markazi" class="hero-image" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== STATS SECTION ===== -->
+    <section class="stats-section" id="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card reveal">
+                    <div class="stat-icon">🎓</div>
+                    <h3 class="stat-number counter-number" data-target="6">0</h3>
+                    <p class="stat-label">Yillik tajriba</p>
+                </div>
+                <div class="stat-card reveal reveal-delay-1">
+                    <div class="stat-icon">📚</div>
+                    <h3 class="stat-number counter-number" data-target="10">0</h3>
+                    <p class="stat-label">O'quv kurslari</p>
+                </div>
+                <div class="stat-card reveal reveal-delay-2">
+                    <div class="stat-icon">👨‍🎓</div>
+                    <h3 class="stat-number counter-number" data-target="1000">0</h3>
+                    <p class="stat-label">Bitiruvchilar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY US SECTION ===== -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">NEGA AYNAN <span class="gradient-text">CLASSMASTER?</span></h2>
+                <p class="section-subtitle">Biz boshqalardan nimamiz bilan farq qilamiz</p>
+            </div>
+            <div class="why-us-grid">
+                <div class="why-card reveal">
+                    <div class="why-icon why-icon-cyan">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                    </div>
+                    <h3 class="why-title">Zamonaviy Metodika</h3>
+                    <p class="why-desc">Eng so'nggi ta'lim texnologiyalari va metodlaridan foydalanib, samarali o'qitish jarayonini ta'minlaymiz.</p>
+                </div>
+                <div class="why-card reveal reveal-delay-1">
+                    <div class="why-icon why-icon-violet">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                    </div>
+                    <h3 class="why-title">Tajribali O'qituvchilar</h3>
+                    <p class="why-desc">Soha mutaxassislari va tajribali pedagoglar jamoasi sizga eng yaxshi bilim beradi.</p>
+                </div>
+                <div class="why-card reveal reveal-delay-2">
+                    <div class="why-icon why-icon-emerald">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 7h6v6"/><path d="m22 7-8.5 8.5-5-5L2 17"/></svg>
+                    </div>
+                    <h3 class="why-title">Kafolatlangan Natija</h3>
+                    <p class="why-desc">O'quvchilarimizning 95% dan ortig'i muvaffaqiyatli natijalar ko'rsatadi va sertifikat oladi.</p>
+                </div>
+                <div class="why-card reveal reveal-delay-3">
+                    <div class="why-icon why-icon-gold">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                    </div>
+                    <h3 class="why-title">Qulay Muhit</h3>
+                    <p class="why-desc">Zamonaviy jihozlangan sinf xonalari va qulay o'quv muhiti sizni kutmoqda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== COURSES SECTION ===== -->
+    <section class="section" id="courses">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">BIZNING <span class="gradient-text">KURSLAR</span></h2>
+                <p class="section-subtitle">Har bir inson uchun mos kurs — kelajagingiz shu yerda boshlanadi</p>
+            </div>
+            <div class="courses-grid">
+
+                <!-- Dasturlash -->
+                <div class="course-card reveal" data-tilt>
+                    <div class="course-gradient-bar gradient-emerald"></div>
+                    <div class="course-header">
+                        <div class="course-icon-wrap bg-emerald">
+                            <img src="images/icons/programming.png" alt="Dasturlash" class="course-icon" />
+                        </div>
+                        <h3 class="course-title">Dasturlash</h3>
+                    </div>
+                    <div class="course-body">
+                        <ul class="course-list">
+                            <li><span class="list-arrow">›</span> Foundation</li>
+                            <li><span class="list-arrow">›</span> Web dasturlash</li>
+                            <li><span class="list-arrow">›</span> Frontend</li>
+                            <li><span class="list-arrow">›</span> Backend</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <a href="https://t.me/classmaster95" target="_blank" rel="noopener noreferrer" class="course-btn">Kursga yozilish</a>
+                    </div>
+                </div>
+
+                <!-- Ingliz tili -->
+                <div class="course-card reveal reveal-delay-1" data-tilt>
+                    <div class="course-gradient-bar gradient-orange"></div>
+                    <div class="course-header">
+                        <div class="course-icon-wrap bg-orange">
+                            <img src="images/icons/english.png" alt="Ingliz tili" class="course-icon" />
+                        </div>
+                        <h3 class="course-title">Ingliz tili</h3>
+                    </div>
+                    <div class="course-body">
+                        <ul class="course-list">
+                            <li><span class="list-arrow">›</span> IELTS</li>
+                            <li><span class="list-arrow">›</span> General English</li>
+                            <li><span class="list-arrow">›</span> Mock Exam</li>
+                            <li><span class="list-arrow">›</span> Grammarway</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <a href="https://t.me/classmaster95" target="_blank" rel="noopener noreferrer" class="course-btn">Kursga yozilish</a>
+                    </div>
+                </div>
+
+                <!-- Matematika -->
+                <div class="course-card reveal reveal-delay-2" data-tilt>
+                    <div class="course-gradient-bar gradient-blue"></div>
+                    <div class="course-header">
+                        <div class="course-icon-wrap bg-blue">
+                            <img src="images/icons/math.png" alt="Matematika" class="course-icon" />
+                        </div>
+                        <h3 class="course-title">Matematika</h3>
+                    </div>
+                    <div class="course-body">
+                        <ul class="course-list">
+                            <li><span class="list-arrow">›</span> Pre-school</li>
+                            <li><span class="list-arrow">›</span> Milliy sertifikat</li>
+                            <li><span class="list-arrow">›</span> Matematika Master</li>
+                            <li><span class="list-arrow">›</span> DTM</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <a href="https://t.me/classmaster95" target="_blank" rel="noopener noreferrer" class="course-btn">Kursga yozilish</a>
+                    </div>
+                </div>
+
+                <!-- Rus tili -->
+                <div class="course-card reveal" data-tilt>
+                    <div class="course-gradient-bar gradient-red"></div>
+                    <div class="course-header">
+                        <div class="course-icon-wrap bg-red">
+                            <img src="images/icons/russia.png" alt="Rus tili" class="course-icon" />
+                        </div>
+                        <h3 class="course-title">Rus tili</h3>
+                    </div>
+                    <div class="course-body">
+                        <ul class="course-list">
+                            <li><span class="list-arrow">›</span> Boshlang'ich daraja</li>
+                            <li><span class="list-arrow">›</span> O'rta daraja</li>
+                            <li><span class="list-arrow">›</span> Yuqori daraja</li>
+                            <li><span class="list-arrow">›</span> Sertifikat</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <a href="https://t.me/classmaster95" target="_blank" rel="noopener noreferrer" class="course-btn">Kursga yozilish</a>
+                    </div>
+                </div>
+
+                <!-- Nemis tili -->
+                <div class="course-card reveal reveal-delay-1" data-tilt>
+                    <div class="course-gradient-bar gradient-amber"></div>
+                    <div class="course-header">
+                        <div class="course-icon-wrap bg-amber">
+                            <img src="images/icons/german.png" alt="Nemis tili" class="course-icon" />
+                        </div>
+                        <h3 class="course-title">Nemis tili</h3>
+                    </div>
+                    <div class="course-body">
+                        <ul class="course-list">
+                            <li><span class="list-arrow">›</span> B1 daraja</li>
+                            <li><span class="list-arrow">›</span> B2 daraja</li>
+                            <li><span class="list-arrow">›</span> Grammatika</li>
+                            <li><span class="list-arrow">›</span> Sertifikat</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <a href="https://t.me/classmaster95" target="_blank" rel="noopener noreferrer" class="course-btn">Kursga yozilish</a>
+                    </div>
+                </div>
+
+                <!-- Koreys tili -->
+                <div class="course-card reveal reveal-delay-2" data-tilt>
+                    <div class="course-gradient-bar gradient-pink"></div>
+                    <div class="course-header">
+                        <div class="course-icon-wrap bg-pink">
+                            <img src="images/icons/korea.png" alt="Koreys tili" class="course-icon" />
+                        </div>
+                        <h3 class="course-title">Koreys tili</h3>
+                    </div>
+                    <div class="course-body">
+                        <ul class="course-list">
+                            <li><span class="list-arrow">›</span> Hangeul alifbosi</li>
+                            <li><span class="list-arrow">›</span> Boshlang'ich daraja</li>
+                            <li><span class="list-arrow">›</span> O'rta daraja</li>
+                            <li><span class="list-arrow">›</span> TOPIK imtihoni</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <a href="https://t.me/classmaster95" target="_blank" rel="noopener noreferrer" class="course-btn">Kursga yozilish</a>
+                    </div>
+                </div>
+
+                <!-- Boshlang'ich ta'lim -->
+                <div class="course-card reveal" data-tilt>
+                    <div class="course-gradient-bar gradient-teal"></div>
+                    <div class="course-header">
+                        <div class="course-icon-wrap bg-teal">
+                            <img src="images/icons/primaryeducation.png" alt="Boshlang'ich ta'lim" class="course-icon" />
+                        </div>
+                        <h3 class="course-title">Boshlang'ich ta'lim</h3>
+                    </div>
+                    <div class="course-body">
+                        <ul class="course-list">
+                            <li><span class="list-arrow">›</span> 1-sinf tayyorlov</li>
+                            <li><span class="list-arrow">›</span> O'qish va yozish</li>
+                            <li><span class="list-arrow">›</span> Matematika asoslari</li>
+                            <li><span class="list-arrow">›</span> Rivojlantirish</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <a href="https://t.me/classmaster95" target="_blank" rel="noopener noreferrer" class="course-btn">Kursga yozilish</a>
+                    </div>
+                </div>
+
+                <!-- Fizika -->
+                <div class="course-card reveal reveal-delay-1" data-tilt>
+                    <div class="course-gradient-bar gradient-indigo"></div>
+                    <div class="course-header">
+                        <div class="course-icon-wrap bg-indigo">
+                            <img src="images/icons/physics.png" alt="Fizika" class="course-icon" />
+                        </div>
+                        <h3 class="course-title">Fizika</h3>
+                    </div>
+                    <div class="course-body">
+                        <ul class="course-list">
+                            <li><span class="list-arrow">›</span> Umumiy fizika</li>
+                            <li><span class="list-arrow">›</span> Milliy sertifikat</li>
+                            <li><span class="list-arrow">›</span> Olimpiada tayyorlov</li>
+                            <li><span class="list-arrow">›</span> DTM</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <a href="https://t.me/classmaster95" target="_blank" rel="noopener noreferrer" class="course-btn">Kursga yozilish</a>
+                    </div>
+                </div>
+
+                <!-- Kompyuter savodxonligi -->
+                <div class="course-card reveal reveal-delay-2" data-tilt>
+                    <div class="course-gradient-bar gradient-cyan"></div>
+                    <div class="course-header">
+                        <div class="course-icon-wrap bg-cyan">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h8"/><path d="M10 19v-3.96 3.15"/><path d="M7 19h5"/><rect width="6" height="10" x="16" y="12" rx="2"/></svg>
+                        </div>
+                        <h3 class="course-title">Kompyuter savodxonligi</h3>
+                    </div>
+                    <div class="course-body">
+                        <ul class="course-list">
+                            <li><span class="list-arrow">›</span> MS Office</li>
+                            <li><span class="list-arrow">›</span> Internet asoslari</li>
+                            <li><span class="list-arrow">›</span> Grafik dizayn</li>
+                            <li><span class="list-arrow">›</span> 1C dasturi</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <a href="https://t.me/classmaster95" target="_blank" rel="noopener noreferrer" class="course-btn">Kursga yozilish</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TEACHERS SECTION ===== -->
+    <section class="section" id="teachers">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">BIZNING <span class="gradient-text">JAMOA</span></h2>
+                <p class="section-subtitle">Tajribali va professional o'qituvchilar jamoasi</p>
+            </div>
+            <div class="teachers-grid">
+                <div class="teacher-card reveal">
+                    <div class="teacher-avatar" style="background: linear-gradient(135deg, #00d4ff, #7c3aed);">
+                        <span class="teacher-initials">AS</span>
+                    </div>
+                    <h3 class="teacher-name">Asliddin Sadullayev</h3>
+                    <p class="teacher-role">Dasturlash bo'limi rahbari</p>
+                    <p class="teacher-desc">5+ yillik tajriba. Full-stack web dasturlash mutaxassisi. 200+ shogird yetishtirgan.</p>
+                </div>
+                <div class="teacher-card reveal reveal-delay-1">
+                    <div class="teacher-avatar" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">
+                        <span class="teacher-initials">NK</span>
+                    </div>
+                    <h3 class="teacher-name">Nilufar Karimova</h3>
+                    <p class="teacher-role">Ingliz tili o'qituvchisi</p>
+                    <p class="teacher-desc">IELTS 8.0 ball. CELTA sertifikati. 300+ o'quvchi IELTS imtihonidan muvaffaqiyatli o'tgan.</p>
+                </div>
+                <div class="teacher-card reveal reveal-delay-2">
+                    <div class="teacher-avatar" style="background: linear-gradient(135deg, #10b981, #06b6d4);">
+                        <span class="teacher-initials">BR</span>
+                    </div>
+                    <h3 class="teacher-name">Bobur Rahimov</h3>
+                    <p class="teacher-role">Matematika o'qituvchisi</p>
+                    <p class="teacher-desc">Matematika fanlari nomzodi. Olimpiada g'oliblari tayyorlash bo'yicha mutaxassis.</p>
+                </div>
+                <div class="teacher-card reveal">
+                    <div class="teacher-avatar" style="background: linear-gradient(135deg, #ec4899, #8b5cf6);">
+                        <span class="teacher-initials">SM</span>
+                    </div>
+                    <h3 class="teacher-name">Sarvinoz Mirzayeva</h3>
+                    <p class="teacher-role">Koreys tili o'qituvchisi</p>
+                    <p class="teacher-desc">TOPIK 6 daraja. Koreya Respublikasida 3 yil o'qigan. 100+ talabani imtihondan o'tkazgan.</p>
+                </div>
+                <div class="teacher-card reveal reveal-delay-1">
+                    <div class="teacher-avatar" style="background: linear-gradient(135deg, #6366f1, #a855f7);">
+                        <span class="teacher-initials">JA</span>
+                    </div>
+                    <h3 class="teacher-name">Jahongir Atamuratov</h3>
+                    <p class="teacher-role">Fizika o'qituvchisi</p>
+                    <p class="teacher-desc">Fizika-matematika fanlari mutaxassisi. DTM va olimpiada tayyorlov bo'yicha tajribali.</p>
+                </div>
+                <div class="teacher-card reveal reveal-delay-2">
+                    <div class="teacher-avatar" style="background: linear-gradient(135deg, #f97316, #eab308);">
+                        <span class="teacher-initials">GT</span>
+                    </div>
+                    <h3 class="teacher-name">Gulnora Tursunova</h3>
+                    <p class="teacher-role">Nemis tili o'qituvchisi</p>
+                    <p class="teacher-desc">Germaniyada 2 yil stajirovka. B2/C1 sertifikat egasi. Goethe-Institut metodikasi.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== NEWS SECTION ===== -->
+    <section class="section" id="news">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">SO'NGGI <span class="gradient-text">YANGILIKLAR</span></h2>
+                <p class="section-subtitle">Eng so'nggi yangiliklar va e'lonlar</p>
+            </div>
+            <div class="news-grid">
+                <div class="news-card reveal">
+                    <div class="news-gradient-bar" style="background: linear-gradient(90deg, #00d4ff, #6366f1);"></div>
+                    <div class="news-content">
+                        <div class="news-top">
+                            <span class="news-emoji">🎓</span>
+                            <span class="news-date">2026-05-10</span>
+                        </div>
+                        <h3 class="news-title">Yangi dasturlash kursi ochildi!</h3>
+                        <p class="news-desc">Foundation va Web dasturlash yo'nalishlarida yangi guruhlar boshlandi. Zamonaviy texnologiyalar bilan kelajak kasbi o'rganing.</p>
+                    </div>
+                </div>
+                <div class="news-card reveal reveal-delay-1">
+                    <div class="news-gradient-bar" style="background: linear-gradient(90deg, #f59e0b, #ef4444);"></div>
+                    <div class="news-content">
+                        <div class="news-top">
+                            <span class="news-emoji">🌟</span>
+                            <span class="news-date">2026-05-01</span>
+                        </div>
+                        <h3 class="news-title">Classmaster — Turtkuldagi eng yaxshi markazi!</h3>
+                        <p class="news-desc">2026-yil natijalari bo'yicha eng yaxshi o'quv markazi unvonini oldik. Muvaffaqiyatlarimiz davom etmoqda!</p>
+                    </div>
+                </div>
+                <div class="news-card reveal reveal-delay-2">
+                    <div class="news-gradient-bar" style="background: linear-gradient(90deg, #10b981, #06b6d4);"></div>
+                    <div class="news-content">
+                        <div class="news-top">
+                            <span class="news-emoji">📱</span>
+                            <span class="news-date">2026-04-20</span>
+                        </div>
+                        <h3 class="news-title">IELTS tayyorlov yangi guruhlar</h3>
+                        <p class="news-desc">May oyida IELTS kursi uchun yangi guruhlar yozilishi boshlandi. O'rinlar soni cheklangan!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS SECTION ===== -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">O'QUVCHILAR <span class="gradient-text">FIKRLARI</span></h2>
+                <p class="section-subtitle">Bitiruvchilarimiz biz haqimizda nima deyishadi</p>
+            </div>
+            <div class="testimonials-slider reveal" id="testimonialsSlider">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Classmaster menga dasturlashni noldan o'rgatdi. Hozir IT kompaniyada ishlayman. O'qituvchilar juda sabrli va professional. Hammaga tavsiya qilaman!"</p>
+                        <div class="testimonial-author-info">
+                            <div class="testimonial-avatar" style="background: linear-gradient(135deg, #00d4ff, #7c3aed);">AX</div>
+                            <div>
+                                <h4 class="testimonial-author">Aziz Xudoyberdiyev</h4>
+                                <p class="testimonial-role">Dasturlash bitiruvchisi, 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"IELTS kursida 3 oy o'qib 7.0 ball oldim. Ustozlar juda yaxshi tayyorlashadi. Mock examlar ayniqsa foydali bo'ldi. Chet elda o'qish orzuyim amalga oshdi!"</p>
+                        <div class="testimonial-author-info">
+                            <div class="testimonial-avatar" style="background: linear-gradient(135deg, #f59e0b, #ef4444);">MR</div>
+                            <div>
+                                <h4 class="testimonial-author">Madina Ruziyeva</h4>
+                                <p class="testimonial-role">IELTS 7.0, 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Bolam 1-sinf tayyorloviga bordi. Juda yaxshi natijalar ko'rsatdi. Hozir maktabda eng yaxshi o'quvchilardan biri. Classmasterga rahmat!"</p>
+                        <div class="testimonial-author-info">
+                            <div class="testimonial-avatar" style="background: linear-gradient(135deg, #10b981, #06b6d4);">DK</div>
+                            <div>
+                                <h4 class="testimonial-author">Dilnoza Karimova</h4>
+                                <p class="testimonial-role">Ota-ona, 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">★★★★★</div>
+                        <p class="testimonial-text">"Nemis tili kursida B2 sertifikatini oldim. O'qituvchimiz Germaniyada yashab kelgan, shuning uchun darslar juda qiziqarli va foydali o'tdi."</p>
+                        <div class="testimonial-author-info">
+                            <div class="testimonial-avatar" style="background: linear-gradient(135deg, #ec4899, #8b5cf6);">SN</div>
+                            <div>
+                                <h4 class="testimonial-author">Sardor Normatov</h4>
+                                <p class="testimonial-role">Nemis tili B2, 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-dots" id="testimonialDots">
+                    <button class="testimonial-dot active" data-index="0"></button>
+                    <button class="testimonial-dot" data-index="1"></button>
+                    <button class="testimonial-dot" data-index="2"></button>
+                    <button class="testimonial-dot" data-index="3"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SOCIAL MEDIA SECTION ===== -->
+    <section class="section" id="social">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">IJTIMOIY <span class="gradient-text">TARMOQLAR</span></h2>
+                <p class="section-subtitle">Bizni ijtimoiy tarmoqlarda kuzatib boring</p>
+            </div>
+            <div class="social-grid">
+                <a href="https://t.me/classmaster95" target="_blank" rel="noopener noreferrer" class="social-card social-telegram reveal">
+                    <div class="social-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                    </div>
+                    <h3 class="social-name">Telegram Kanal</h3>
+                    <p class="social-desc">Yangiliklar va e'lonlar</p>
+                    <span class="social-handle">@classmaster95</span>
+                </a>
+                <a href="https://instagram.com/classmaster_uz" target="_blank" rel="noopener noreferrer" class="social-card social-instagram reveal reveal-delay-1">
+                    <div class="social-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </div>
+                    <h3 class="social-name">Instagram</h3>
+                    <p class="social-desc">Fotolar va Stories</p>
+                    <span class="social-handle">@classmaster95</span>
+                </a>
+                <a href="https://youtube.com/@classmaster95" target="_blank" rel="noopener noreferrer" class="social-card social-youtube reveal reveal-delay-2">
+                    <div class="social-icon">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+                    </div>
+                    <h3 class="social-name">YouTube Kanal</h3>
+                    <p class="social-desc">Darslar va videolar</p>
+                    <span class="social-handle">@classmaster95</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FAQ SECTION ===== -->
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">KO'P BERILADIGAN <span class="gradient-text">SAVOLLAR</span></h2>
+                <p class="section-subtitle">Eng ko'p so'raladigan savollarga javoblar</p>
+            </div>
+            <div class="faq-list reveal">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Kurslar qancha davom etadi?</span>
+                        <span class="faq-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Kurslarimiz 3 oydan 12 oygacha davom etadi. Dasturlash kurslari odatda 6-12 oy, til kurslari 3-6 oy, matematika va fizika kurslari esa 4-8 oy davom etadi. Har bir kurs individual tarzda tuzilgan.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Kurs narxlari qancha?</span>
+                        <span class="faq-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Narxlar kurs turiga qarab farq qiladi. Aniq narxlarni bilish uchun +998 95 899-55-00 raqamiga qo'ng'iroq qiling yoki Telegram orqali bog'laning. Chegirmalar va aksiyalar muntazam o'tkaziladi.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Online ta'lim ham bormi?</span>
+                        <span class="faq-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Ha, ba'zi kurslarimiz online formatda ham mavjud. Ayniqsa dasturlash va til kurslari online ham o'tiladi. Offline darslarga qatnashish imkoni bo'lmagan o'quvchilar uchun qulay variant.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Sertifikat beriladimi?</span>
+                        <span class="faq-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Ha, kursni muvaffaqiyatli tugatgan barcha o'quvchilarimizga Classmaster O'quv Markazi tomonidan sertifikat beriladi. Shuningdek, IELTS, TOPIK va boshqa xalqaro imtihonlarga tayyorlash ham amalga oshiriladi.
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Qaysi yoshdagi bolalar qabul qilinadi?</span>
+                        <span class="faq-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </span>
+                    </button>
+                    <div class="faq-answer">
+                        <div class="faq-answer-inner">
+                            Boshlang'ich ta'lim kurslari 5 yoshdan, til kurslari 7 yoshdan, dasturlash kurslari 12 yoshdan qabul qiladi. Kattalar uchun ham barcha kurslarimiz ochiq. Yosh chegarasi yo'q!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2 class="section-title">BIZ BILAN <span class="gradient-text">BOG'LANING</span></h2>
+                <p class="section-subtitle">Savollaringiz bormi? Biz bilan bog'laning!</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <a href="https://www.google.com/maps/place/ClassMaster/@41.553137,60.9960846,18z" target="_blank" rel="noopener noreferrer" class="contact-item">
+                        <div class="contact-icon-wrap" style="background: rgba(0,212,255,0.1);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00d4ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8c0 3.613-3.869 7.429-5.393 8.795a1 1 0 0 1-1.214 0C9.87 15.429 6 11.613 6 8a6 6 0 0 1 12 0"/><circle cx="12" cy="8" r="2"/><path d="M8.714 14h-3.71a1 1 0 0 0-.948.683l-2.004 6A1 1 0 0 0 3 22h18a1 1 0 0 0 .948-1.316l-2-6a1 1 0 0 0-.949-.684h-3.712"/></svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4 class="contact-label">Manzil (ustiga bosing)</h4>
+                            <p class="contact-value">To'rtko'l ko'chasi 52</p>
+                            <p class="contact-hint">Soliq idorasi yonida</p>
+                        </div>
+                    </a>
+                    <a href="tel:+998958995500" class="contact-item">
+                        <div class="contact-icon-wrap" style="background: rgba(16,185,129,0.1);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4 class="contact-label">Telefon</h4>
+                            <p class="contact-value">+998 95 899-55-00</p>
+                            <p class="contact-hint">Har kuni 09:00 - 18:00</p>
+                        </div>
+                    </a>
+                    <a href="mailto:classmaster95@gmail.com" class="contact-item">
+                        <div class="contact-icon-wrap" style="background: rgba(124,58,237,0.1);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.2 8.4c.5.38.8.97.8 1.6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 .8-1.6l8-6a2 2 0 0 1 2.4 0l8 6Z"/><path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10"/></svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4 class="contact-label">Email</h4>
+                            <p class="contact-value">classmaster95@gmail.com</p>
+                        </div>
+                    </a>
+                    <a href="https://t.me/classmaster95" target="_blank" rel="noopener noreferrer" class="contact-item">
+                        <div class="contact-icon-wrap" style="background: rgba(0,136,204,0.1);">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0088cc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4 class="contact-label">Telegram</h4>
+                            <p class="contact-value">@classmaster95</p>
+                            <p class="contact-hint">24/7 yozishingiz mumkin</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="contact-form-wrap reveal-right">
+                    <h3 class="contact-form-title">Xabar yuborish</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" class="form-input" id="formName" placeholder="Ismingiz" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" class="form-input" id="formEmail" placeholder="Email manzilingiz" required />
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" class="form-input" id="formPhone" placeholder="+998 90 123 45 67" />
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" class="form-input form-textarea" id="formMessage" rows="4" placeholder="Xabaringiz..." required></textarea>
+                        </div>
+                        <button type="submit" class="form-btn" id="formSubmitBtn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>
+                            <span class="form-btn-text">Xabar yuborish</span>
+                        </button>
+                        <p class="form-status" id="formStatus" style="display:none;"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="footer">
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M0 50L48 45.7C96 41.3 192 32.7 288 30.2C384 27.7 480 31.3 576 39.8C672 48.3 768 61.7 864 60.2C960 58.7 1056 42.3 1152 35.8C1248 29.3 1344 32.7 1392 34.3L1440 36V100H1392C1344 100 1248 100 1152 100C1056 100 960 100 864 100C768 100 672 100 576 100C480 100 384 100 288 100C192 100 96 100 48 100H0V50Z" fill="currentColor"/>
+            </svg>
+        </div>
+        <div class="footer-content">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-about">
+                        <div class="footer-logo">
+                            <img src="images/logo.jpg" alt="Classmaster Logo" class="footer-logo-img" />
+                            <div class="footer-logo-text">
+                                <span class="footer-brand">classmaster</span>
+                                <span class="footer-brand-sub">O'quv Markazi</span>
+                            </div>
+                        </div>
+                        <p class="footer-desc">Zamonaviy kasblarni o'rgatuvchi innovatsion ta'lim markazi. 2020-yildan buyon xizmatda.</p>
+                        <div class="footer-socials">
+                            <a href="https://t.me/classmaster95" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Telegram">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>
+                            </a>
+                            <a href="https://instagram.com/classmaster95" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="Instagram">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                            </a>
+                            <a href="https://youtube.com/@classmaster95" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="YouTube">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Havolalar</h4>
+                        <ul class="footer-links">
+                            <li><a href="#home">Bosh sahifa</a></li>
+                            <li><a href="#about">Biz haqimizda</a></li>
+                            <li><a href="#courses">Kurslar</a></li>
+                            <li><a href="#teachers">O'qituvchilar</a></li>
+                            <li><a href="#contact">Bog'lanish</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Kurslar</h4>
+                        <ul class="footer-links">
+                            <li><a href="#courses">Dasturlash</a></li>
+                            <li><a href="#courses">Ingliz tili</a></li>
+                            <li><a href="#courses">Matematika</a></li>
+                            <li><a href="#courses">Rus tili</a></li>
+                            <li><a href="#courses">Nemis tili</a></li>
+                            <li><a href="#courses">Koreys tili</a></li>
+                            <li><a href="#courses">Boshlang'ich ta'lim</a></li>
+                            <li><a href="#courses">Fizika</a></li>
+                            <li><a href="#courses">Kompyuter savodxonligi</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-heading">Aloqa</h4>
+                        <ul class="footer-links">
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:6px;opacity:0.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                +998 95 899-55-00
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:6px;opacity:0.5"><path d="M18 8c0 3.613-3.869 7.429-5.393 8.795a1 1 0 0 1-1.214 0C9.87 15.429 6 11.613 6 8a6 6 0 0 1 12 0"/><circle cx="12" cy="8" r="2"/></svg>
+                                To'rtko'l ko'chasi 52
+                            </li>
+                            <li>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline;vertical-align:middle;margin-right:6px;opacity:0.5"><path d="M21.2 8.4c.5.38.8.97.8 1.6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 .8-1.6l8-6a2 2 0 0 1 2.4 0l8 6Z"/><path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10"/></svg>
+                                classmaster95@gmail.com
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2026 Classmaster O'quv Markazi. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== FLOATING CTA ===== -->
+    <a href="#courses" class="floating-cta" id="floatingCta" aria-label="Kurslarni ko'rish">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
